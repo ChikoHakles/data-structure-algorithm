@@ -12,10 +12,13 @@ def main():
         inp = r.randint(0, data_size)
         res_seq = sa.seq_search(data, inp)
         res_bin = sa.binary_search(data, inp)
-        data_seq.append(res_seq[1])
-        data_bin.append(res_bin[1])
-    print("Sequential Search (Highest, Lowest) :", max(data_seq), min(data_seq))
-    print("Binary Search (Highest, Lowest) :", max(data_bin), min(data_bin))
+        data_seq.append(res_seq)
+        data_bin.append(res_bin)
+    print("Below are result of search, formatted as (Value to Search, Loop Count) : ")
+    print("  Sequential Search Highest :", max(data_seq))
+    print("  Binary Search Highest :", max(data_bin))
+    print("  Sequential Search Lowest :", min(data_seq))
+    print("  Binary Search Lowest:", min(data_bin))
 
 
 if __name__ == "__main__":
